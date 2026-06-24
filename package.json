@@ -1,0 +1,13 @@
+{
+  "name": "yashu-engagement",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "optimize": "node scripts/optimize-assets.mjs",
+    "social": "node scripts/generate-social.mjs"
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "sharp": "^0.34.2"
+  }
+}
