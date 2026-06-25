@@ -7,9 +7,10 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const assetsDir = path.join(root, "assets");
 
-const logoPath = path.join(assetsDir, "logo.jpg");
+const logoPath = path.join(assetsDir, "logo3.jpg");
+const ogImagePath = path.join(assetsDir, "g3.jpg");
 const thumbPath = path.join(assetsDir, "thump.png");
-const heroPath = path.join(assetsDir, "herobg.jpg");
+const heroPath = path.join(assetsDir, "hero2.jpg");
 const ogThumbPath = path.join(assetsDir, "og-thumb.jpg");
 const ogThumbWebpPath = path.join(assetsDir, "og-thumb.webp");
 
@@ -40,11 +41,13 @@ async function generateFavicons() {
 }
 
 async function generateOgThumb() {
-  const source = fs.existsSync(thumbPath)
-    ? thumbPath
-    : fs.existsSync(heroPath)
-      ? heroPath
-      : logoPath;
+  const source = fs.existsSync(ogImagePath)
+    ? ogImagePath
+    : fs.existsSync(thumbPath)
+      ? thumbPath
+      : fs.existsSync(heroPath)
+        ? heroPath
+        : logoPath;
 
   if (!fs.existsSync(source)) {
     console.warn("Skip og-thumb: no source image found");

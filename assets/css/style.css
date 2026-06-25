@@ -161,7 +161,7 @@ body.intro-done {
   max-width: 480px;
   min-height: 100dvh;
   padding:
-    max(1.75rem, env(safe-area-inset-top) + 1rem)
+    max(0.85rem, env(safe-area-inset-top) + 0.35rem)
     1.25rem
     max(0.5rem, env(safe-area-inset-bottom));
 }
@@ -185,8 +185,8 @@ body.intro-done {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-top: clamp(0.5rem, 3vh, 1.5rem);
-  margin-bottom: clamp(1rem, 3vh, 1.5rem);
+  margin-top: 0;
+  margin-bottom: clamp(0.75rem, 2vh, 1.25rem);
   opacity: 0;
 }
 
@@ -207,7 +207,7 @@ body.intro-done {
   justify-content: flex-start;
   text-align: center;
   width: 100%;
-  padding-bottom: clamp(1rem, 3vh, 2rem);
+  padding-bottom: clamp(0.5rem, 2vh, 1.25rem);
 }
 
 .hero__pretitle {
